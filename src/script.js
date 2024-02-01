@@ -32,6 +32,7 @@
     var insta = document.querySelector('.insta-input');
     var likeCountElement = document.getElementById('likeCount');
     var heart = document.querySelector('.filled');
+    var credit = document.querySelector('.credit');
     
     // Function to get the user's IP address
     function getIPAddress() {
@@ -174,5 +175,7 @@ async function submit() {
     insta.style.display = 'none';
 labelName.style.display = 'none';
 labelInsta.style.display = 'none';
+credit.style.display = 'flex';
+
 
   }
