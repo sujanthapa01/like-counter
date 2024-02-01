@@ -28,11 +28,12 @@ const db = getDatabase();
 
 var user = document.querySelector('.name-input');
 var likeBtn = document.querySelector('.btn');
-
+var insta = document.querySelector('.insta-input');
 
 function submit(){
 set(ref(db,'people/' + user.value),{
-  Name:user.value
+  Name:user.value,
+  Instagram : insta.value
 })
 .then(()=>{
 alert('sucess!')
