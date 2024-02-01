@@ -21,9 +21,6 @@
       const app = initializeApp(firebaseConfig);
     //   const analytics = getAnalytics(app);
 
-
-
-
 var msg = document.querySelector('.msg');
 const db = getDatabase();
 
