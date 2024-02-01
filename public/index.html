@@ -11,31 +11,84 @@
 </head>
   </head>
   <body>
-    <div>
-      <img class="profile" src="/src/profile.jpg" alt="">
-    </div>
+
     <main>
       <div class="container">
-        <div>
-          <div class="card" id="imageCard">
-            <div class="close-card" onclick="closeCard()"><p>X</p></div>
-            <div class="card-image" id="cardImage"></div>
+        <header class="header"><span class="head">Hit The Like Button</span></header>
+        <div class="input-wrapper">
+          <div>
+            <div>
+              <label class="label-name" for="name-input">Name</label>
+            </div>
+            <input id="name-input" class="name-input input" type="text">
           </div>
-          <div><button onclick="openCard()">Add Image</button></div>
+          <div>
+            <div>
+              <label class="label-insta" for="insta-input">Insta Id</label>
+            </div>
+            <input id="insta-input" class="insta-input input" type="text">
+          </div>
+          <div class="msg-wrapper msg-translateY">
+            <span class="msg "></span>
+          </div>
+  
         </div>
-      
-
+  
+  
         <div class="like-wrapper">
+  
           <button class="btn">
-            <img class="like-btn" src="/src/greylike.png" alt="" />
-            <span>like</span>
+            <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="10" height="10">
+              <path fill="none" d="M0 0H24V24H0z"></path>
+              <path
+                d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z">
+              </path>
+            </svg>
+            <svg class="filled" height="30" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0H24V24H0z" fill="none"></path>
+              <path
+                d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z">
+              </path>
+            </svg>
           </button>
-
-          <div class="like-count">Likes: <span id="likeCount">0</span></div>
+  
         </div>
+  
+        <div class="credit">
+          <div class="thanks"><span class="thanks-span">Thanks For Your Like</span></div>
+  
+          <div class="credit-conatiner">
+  
+            <div><span class="credit-head">credit</span></div>
+            <div class="credit-wrapper">
+  
+              <div class="credit-img-div"><img class="credit-img" src="src/credit.webp" alt=""></div>
+              <div class="credit-para">
+                <div><span class="developer-credit">developed by <a class="devloper-name" href="https://www.instagram.com/idkconundrum_/">sujan thapa</a></span></div>
+                <div class="credit-bio"><span class="bio">made with love <img class="heart" src="src/love.png" alt=""></span></div>
+  
+              </div>
+            </div>
+  
+  
+  
+          </div>
+  
+  
+  
+  
+        </div>
+  
+  
       </div>
+  
     </main>
-
-    </script>
+    <div class="user-names">
+      <div>
+      <div class="like-count"> <div class="like-box">Likes: <span id="likeCount">0</span></div></div>
+    </div>
+      <div id="nameBackground"></div>
+    </div>
+  
   </body>
 </html>

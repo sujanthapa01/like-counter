@@ -33,7 +33,10 @@
     var likeCountElement = document.getElementById('likeCount');
     var heart = document.querySelector('.filled');
     var credit = document.querySelector('.credit');
-    
+    var thanks = document.querySelector('.thanks-span');
+    var msgWrapper = document.querySelector('.msg-wrapper');
+
+
     // Function to get the user's IP address
     function getIPAddress() {
       return fetch('https://api64.ipify.org?format=json')
@@ -86,18 +89,24 @@ function checkLikedStatus() {
   getIPAddress().then(ipAddress => {
     if (!ipAddress) {
       console.error('Unable to retrieve IP address.');
-      msg.innerText = 'liked '
+      msg.innerText = 'liked ';
       return;
     }
 
     const userRef = ref(db, `people/${ipAddress}`);
 
-    get(child(userRef, 'liked')).then(snapshot => {
-      const alreadyLiked = snapshot.val() === true;
+    // Fetch the user data
+    get(userRef).then(snapshot => {
+      const userData = snapshot.val();
 
-      if (alreadyLiked) {
-        msg.innerText = `${user.value}, You already liked 😁`;
+      if (userData && userData.liked) {
+        const userName = userData.Name;
+        msg.innerText = `Welcome back`
+        thanks.innerText = ` ${userName}! You already liked 😁`;
+
         disableForm();
+      } else {
+        
       }
     });
   });
@@ -129,7 +138,7 @@ async function submit() {
     const alreadyLiked = snapshot.val() === true;
 
     if (alreadyLiked) {
-      msg.innerText = `${user.value}, You already liked 😁`;
+      msg.innerText = `${user.value} You already liked 😁`;
       return;
     }
 
@@ -140,7 +149,7 @@ async function submit() {
       liked: true // Mark the user as liked
     })
       .then(() => {
-        msg.innerText = `Thanks for the like!😍 ,${user.value}`;
+        msg.innerText = `Thanks for the like! ${user.value}😍 `;
         heart.style.opacity = '1';
 
         // Increment the individual user like count
@@ -162,6 +171,8 @@ async function submit() {
         alert(error);
       });
   });
+
+  
 }
 // ...
   // Function to disable the form elements
@@ -176,6 +187,5 @@ async function submit() {
 labelName.style.display = 'none';
 labelInsta.style.display = 'none';
 credit.style.display = 'flex';
-
-
+msgWrapper.classList.add('msg-tanslateY');
   }

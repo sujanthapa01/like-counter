@@ -9,7 +9,11 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     /* border: 1px solid black; */
+   
     /* text-decoration: none; */
+}
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(199,148,233,0.6223739495798319) 100%);
 }
 
 
@@ -28,9 +32,10 @@ main {
     align-items: center;
     flex-direction: column;
     height: 22rem;
-
-    border: 1px solid black;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border: 1px dashed black;
     width: 16rem;
+background-color: whitesmoke;
     border-radius: 9px;
 }
 
@@ -49,7 +54,7 @@ main {
 .msg {
     /* opacity: 0; */
     transition: opacity 0.5s ease-in-out;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     font-size: 12px;
     font-family: 'Gloria Hallelujah', cursive;
 
@@ -70,6 +75,11 @@ main {
     align-items: center;
     gap: 2rem;
     width: 100%;
+}
+
+.msg-translateY{
+    transform: translateY(-12px);
+    font-size: 14px;
 }
 
 Background {
@@ -96,13 +106,14 @@ Background {
 
 .user-container {
     margin: 5px;
-    /* Adjust margin as needed */
-    background-color: #ececec;
-    /* Add background color or any styling as needed */
+  
+    background-color: #ffffff;
+   
     padding: 10px;
-    /* Add padding as needed */
+
     border-radius: 5px;
-    /* Add border-radius for a rounded appearance */
+   
+    border: 1px dashed black;
 }
 
 .user-names {
@@ -332,6 +343,7 @@ button:hover .filled {
 
 .thanks>span {
     font-weight: bold;
+    font-size: 13px;
 }
 
 .like-count:first-child {
@@ -348,4 +360,6 @@ button:hover .filled {
 }
 #nameBackground{
     margin-top: 2rem;
+    
 }
+
