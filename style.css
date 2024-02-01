@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px solid black; */
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-btn{
+ height: 20px;
+ transition: all ease 300ms;  
+}
+
+.btn:hover > .like-btn{
+    scale: 1.2;
+}
+
+.btn{
+    display: flex;
+    width: 60px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-weight: 900;
+    transition: all ease 300ms; 
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10rem;
+    height: auto;
+    gap: 2rem;
+}
+
+/* .msg{
+    transition: all ease 3s;
+    animation: anime 2s ease 1;
+    background-color: aliceblue;
+    opacity: 0;
+} */
+
+.msg-wrapper{
+    height: 40px;
+}
+
+.msg {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;background-color: aliceblue;
+    opacity: 0;
+  
+  }
+  
+.fade-in {
+    opacity: 1;
+  }
+  
+.fade-out {
+    opacity: 0;
+  }
+  
+
+.like-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+

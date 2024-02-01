@@ -1,0 +1,59 @@
+[debug] [2024-02-01T07:52:05.914Z] ----------------------------------------------------------------------
+[debug] [2024-02-01T07:52:05.916Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sujan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-02-01T07:52:05.916Z] CLI Version:   13.1.0
+[debug] [2024-02-01T07:52:05.917Z] Platform:      win32
+[debug] [2024-02-01T07:52:05.917Z] Node Version:  v20.11.0
+[debug] [2024-02-01T07:52:05.917Z] Time:          Thu Feb 01 2024 13:22:05 GMT+0530 (India Standard Time)
+[debug] [2024-02-01T07:52:05.917Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-01T07:52:05.972Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-01T07:52:05.973Z] > authorizing via signed-in user (sujanthapast0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Vscode\test2
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-02-01T07:52:17.836Z] Using project from CLI flag: deft-cove-363816
+[debug] [2024-02-01T07:52:17.837Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deft-cove-363816 [none]
+[debug] [2024-02-01T07:52:18.350Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deft-cove-363816 200
+[debug] [2024-02-01T07:52:18.350Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deft-cove-363816 {"projectId":"deft-cove-363816","projectNumber":"467462296842","displayName":"My First Project","name":"projects/deft-cove-363816","resources":{"hostingSite":"deft-cove-363816","realtimeDatabaseInstance":"deft-cove-363816-default-rtdb","storageBucket":"deft-cove-363816.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_9a8c7ce7-8bdc-44eb-8f68-515b1e216885"}
+[info] i  Using project deft-cove-363816 (My First Project) 
+[info] 
+=== Hosting Setup
+[debug] [2024-02-01T07:52:18.354Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deft-cove-363816 [none]
+[debug] [2024-02-01T07:52:18.697Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deft-cove-363816 200
+[debug] [2024-02-01T07:52:18.697Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deft-cove-363816 {"projectId":"deft-cove-363816","projectNumber":"467462296842","displayName":"My First Project","name":"projects/deft-cove-363816","resources":{"hostingSite":"deft-cove-363816","realtimeDatabaseInstance":"deft-cove-363816-default-rtdb","storageBucket":"deft-cove-363816.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_9a8c7ce7-8bdc-44eb-8f68-515b1e216885"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-02-01T07:52:24.055Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-02-01T07:52:24.194Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-02-01T07:52:24.194Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.7.2","browserURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.tgz"},"live":{"version":"10.7","browserURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.7.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.7.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.7.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.7.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at E:\Vscode 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=561900745&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
