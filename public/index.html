@@ -11,14 +11,19 @@
 </head>
   </head>
   <body>
+    <div>
+      <img class="profile" src="/src/profile.jpg" alt="">
+    </div>
     <main>
       <div class="container">
-
-        <input class="name-input" type="text">
-        <input class="insta-input" type="text">
-        <div class="msg-wrapper">
-          <span class="msg">this is messege</span>
+        <div>
+          <div class="card" id="imageCard">
+            <div class="close-card" onclick="closeCard()"><p>X</p></div>
+            <div class="card-image" id="cardImage"></div>
+          </div>
+          <div><button onclick="openCard()">Add Image</button></div>
         </div>
+      
 
         <div class="like-wrapper">
           <button class="btn">
