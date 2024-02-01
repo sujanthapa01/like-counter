@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -13,8 +13,8 @@
 }
 
 
-main{
-    height: 100vh;
+main {
+    height: 72vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -22,13 +22,13 @@ main{
 }
 
 
-.container{
+.container {
     display: flex;
-   /* justify-content: center; */
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     height: 22rem;
-    
+
     border: 1px solid black;
     width: 16rem;
     border-radius: 9px;
@@ -41,35 +41,37 @@ main{
     opacity: 0;
 } */
 
-.msg-wrapper{
+.msg-wrapper {
     height: 40px;
     text-align: center;
 }
 
 .msg {
     /* opacity: 0; */
-    transition: opacity 0.5s ease-in-out;background-color: aliceblue;
+    transition: opacity 0.5s ease-in-out;
+    background-color: aliceblue;
     font-size: 12px;
     font-family: 'Gloria Hallelujah', cursive;
-  
-  }
-  
+
+}
+
 .fade-in {
     opacity: 1;
-  }
-  
+}
+
 .fade-out {
     opacity: 0;
-  }
-  
+}
 
-.like-wrapper{
+
+.like-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     width: 100%;
-  }
+}
+
 Background {
     position: fixed;
     top: 0;
@@ -83,56 +85,62 @@ Background {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-  #nameBackground {
+}
+
+#nameBackground {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .user-container {
-    margin: 5px; /* Adjust margin as needed */
-    background-color: #ececec; /* Add background color or any styling as needed */
-    padding: 10px; /* Add padding as needed */
-    border-radius: 5px; /* Add border-radius for a rounded appearance */
-  }
+.user-container {
+    margin: 5px;
+    /* Adjust margin as needed */
+    background-color: #ececec;
+    /* Add background color or any styling as needed */
+    padding: 10px;
+    /* Add padding as needed */
+    border-radius: 5px;
+    /* Add border-radius for a rounded appearance */
+}
 
-  .user-names{
-    margin-top: 100px;
-  }
+.user-names {
+    margin-top: 50px;
+}
 
-  .h2{
+.h2 {
     font-size: 16px;
-  }
+}
 
-  .input{
+.input {
     width: 12rem;
     height: 1.8rem;
     outline: none;
     border: 1px solid black;
-    border-radius: 9px ;
+    border-radius: 9px;
     padding: 0px .3rem;
-  }
+}
 
-  .input-wrapper{
+.input-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-   
-  }
-  .header{
-    margin-bottom: 1.6rem;
-    margin-top: 1.6rem;
-    
+
 }
 
-.head{
+.header {
+    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
+
+}
+
+.head {
     font-family: 'Honk', system-ui;
     font-size: 1.5rem;
 }
 
-label{
+label {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -147,168 +155,197 @@ button {
     border-style: solid;
     border-width: 9px;
     border-radius: 35px;
-    transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
-    border-color 400ms ease-in-out,
-    background-color 400ms ease-in-out;
+    transition: transform 400ms cubic-bezier(.68, -0.55, .27, 2.5),
+        border-color 400ms ease-in-out,
+        background-color 400ms ease-in-out;
     word-spacing: -2px;
-  }
-  
-  @keyframes movingBorders {
+}
+
+@keyframes movingBorders {
     0% {
-      border-color: #fce4e4;
+        border-color: #fce4e4;
     }
-  
+
     50% {
-      border-color: #ffd8d8;
+        border-color: #ffd8d8;
     }
-  
+
     90% {
-      border-color: #fce4e4;
+        border-color: #fce4e4;
     }
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #eee;
     transform: scale(105%);
     animation: movingBorders 3s infinite;
     cursor: pointer;
-  }
-  
-  .filled,
-  .empty {
+}
+
+.filled,
+.empty {
     fill: rgb(255, 110, 110);
     transition: opacity 100ms ease-in-out;
-  }
-  
-  .filled {
+}
+
+.filled {
     position: absolute;
     opacity: 1;
-  }
-  
-  @keyframes beatingHeart {
+}
+
+@keyframes beatingHeart {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  
+
     15% {
-      transform: scale(1.15);
+        transform: scale(1.15);
     }
-  
+
     30% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  
+
     45% {
-      transform: scale(1.15);
+        transform: scale(1.15);
     }
-  
+
     60% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  button:hover .empty {
+}
+
+button:hover .empty {
     opacity: 0;
-  }
-  
-  button:hover .filled {
+}
+
+button:hover .filled {
     opacity: 1;
     animation: beatingHeart 1.2s infinite;
-  }
+}
 
 
-  .credit-img{
+.credit-img {
     height: 45px;
     width: 45px;
-  }
+}
 
-  .credit-conatiner{
+.credit-conatiner {
     text-align: center;
 }
 
-.credit-wrapper{
+.credit-wrapper {
     display: flex;
     gap: .5rem;
     border: 1px solid black;
     padding: .2rem;
+    ;
     justify-content: center;
-align-items: center; 
-border-radius: 2px; 
-padding-left: 0rem .2rem;
-transition: all ease 300ms;}
+    align-items: center;
+    border-radius: 2px;
+    width: 100%;
+    transition: all ease 300ms;
+}
 
-  .credit-para{
+.credit-para {
     display: flex;
     flex-direction: column;
     text-align: start;
     justify-content: center;
     cursor: pointer;
-  }
+}
 
-  .credit-wrapper:hover{
+.credit-wrapper:hover {
     background-color: #fce4e44b;
 }
 
-  .developer-credit{
-    font-size:12px ;
-  }
+.developer-credit {
+    font-size: 12px;
+}
 
-  .bio{
-    font-size:11px;
-  }
+.bio {
+    font-size: 11px;
+}
 
-  .credit{
+.credit {
     height: 100%;
+
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
-  
-  }
+
+}
 
 
-  .credit-head{
+.credit-head {
     font-family: 'Honk', system-ui;
     font-size: 1.5rem;
-  }
+}
 
-  .credit-img-div{
+.credit-img-div {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .bio{
+.bio {
     display: flex;
     align-items: center;
     gap: .5rem;
     font-family: 'Gloria Hallelujah', cursive;
-  }
+}
 
-  .heart{
+.heart {
     animation: heartbeat 1s infinite;
-  }
+}
 
-  @keyframes heartbeat {
-    0%, 20%, 50%, 80%, 100% {
-      transform: scale(1);
+@keyframes heartbeat {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: scale(1);
     }
 
     40% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
 
     60% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  }
-  .devloper-name{
+}
+
+.devloper-name {
     color: red;
     /* text-decoration: dashed; */
     cursor: pointer;
-    font-size:15px ;
-  }
+    font-size: 15px;
+}
 
 
-  .thanks{
+.thanks {
     text-align: center;
-  }
+}
+
+.thanks>span {
+    font-weight: bold;
+}
+
+.like-count:first-child {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.like-box{
+    border: 1px dashed black;
+    padding: .2rem .5rem;
+    border-radius: 9px;
+
+}
+#nameBackground{
+    margin-top: 2rem;
+}
