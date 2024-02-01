@@ -1,6 +1,6 @@
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-      import {getDatabase, set ,get, update ,remove ,ref, child} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+      import {getDatabase, set ,get, update ,remove ,ref, child,onValue} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -24,25 +24,63 @@
 
 
 
+var msg = document.querySelector('.msg');
 const db = getDatabase();
 
-var user = document.querySelector('.name-input');
-var likeBtn = document.querySelector('.btn');
-var insta = document.querySelector('.insta-input');
+      var user = document.querySelector('.name-input');
+      var likeBtn = document.querySelector('.btn');
+      var insta = document.querySelector('.insta-input');
+      var likeCountElement = document.getElementById('likeCount');
 
-function submit(){
-set(ref(db,'people/' + user.value),{
-  Name:user.value,
-  Instagram : insta.value
-})
-.then(()=>{
-alert('sucess!')
-})
-.catch((error)=>{
-alert(error)
-});
+      likeBtn.addEventListener('click', submit);
 
+      // Function to update the like count in the UI
+      function updateLikeCountUI(count) {
+        likeCountElement.innerText = count;
+      }
 
-}
-likeBtn.addEventListener('click',submit);
+      // Fetch and display the initial like count
+      const likeCountRef = ref(db, 'posts/likeCount');
+      onValue(likeCountRef, (snapshot) => {
+        const currentLikeCount = snapshot.val() || 0;
+        updateLikeCountUI(currentLikeCount);
+      });
 
+      function submit() {
+        const userRef = ref(db, 'people/' + user.value);
+
+        // Check if the user has already liked
+        get(child(userRef, 'liked')).then((snapshot) => {
+          const alreadyLiked = snapshot.val() === true;
+
+          if (alreadyLiked) {
+            alert('Thanks for liking!');
+            return;
+          }
+
+          // If not already liked, proceed with the like
+          set(userRef, {
+            Name: user.value,
+            Instagram: insta.value,
+            liked: true // Mark the user as liked
+          })
+            .then(() => {
+              alert('Thanks for liking!');
+
+              // Increment the individual user like count
+              get(likeCountRef).then((snapshot) => {
+                const currentLikeCount = snapshot.val() || 0;
+                set(likeCountRef, currentLikeCount + 1);
+              });
+
+              // Increment the total like count
+              get(ref(db, 'posts/totalLikes')).then((snapshot) => {
+                const currentTotalLikeCount = snapshot.val() || 0;
+                set(ref(db, 'posts/totalLikes'), currentTotalLikeCount + 1);
+              });
+            })
+            .catch((error) => {
+              alert(error);
+            });
+        });
+      }
