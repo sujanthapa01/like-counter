@@ -1,6 +1,6 @@
 # like-counter
 
-🚀 Brief description or tagline for your project.
+🚀 likemee  - made with love❤️
 
 ## Table of Contents
 
@@ -17,14 +17,14 @@
 
 ## Introduction
 
-Welcome to [Your Project Name]! A concise description that introduces your project and explains its purpose.
+Welcome to likemee! A concise description that introduces your project and explains its purpose.
 
 ## Features
 
 🌟 List of key features that make your project stand out:
 
-- **Feature 1:** Description of Feature 1.
-- **Feature 2:** Description of Feature 2.
+- **Feature 1:** name is displayed to every one.
+- **Feature 2:** contribute ti give a like.
 - ...
 
 ## Getting Started
@@ -35,8 +35,8 @@ Welcome to [Your Project Name]! A concise description that introduces your proje
 
 Make sure you have the following installed:
 
-- Prerequisite 1
-- Prerequisite 2
+- node.js
+- firebase
 - ...
 
 ### Installation
