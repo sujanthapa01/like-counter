@@ -1,6 +1,6 @@
-<h1>LikeMee - Spread Love and Likes! ❤️</h1>
 
-<h4>Table of Contents</h4>
+LikeMee - Spread Love and Likes! ❤️
+Table of Contents
 Introduction
 Features
 Getting Started
@@ -58,6 +58,6 @@ License
 This project is licensed under the MIT License.
 
 Acknowledgments
-Special thanks to [Your Name] for the inspiration and guidance.
+Special thanks to Me😁.
 
 Made with ❤️ by Sujan Thapa. Follow me on Instagram.
