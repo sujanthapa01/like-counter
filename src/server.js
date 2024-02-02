@@ -64,8 +64,13 @@ function updateUsersList(users) {
     const userNameDiv = document.createElement('div');
     userNameDiv.innerText = user.Name;
     userNameDiv.classList.add('user-container'); // Add the user-container class
+
+    // Add a specific class for styling a special user
+    if (user.isSpecial) {
+      userNameDiv.classList.add('special-user-style');
+    }
+
     nameBackground.appendChild(userNameDiv);
-  
   });
 }
 
@@ -89,11 +94,11 @@ function checkLikedStatus() {
   getIPAddress().then(ipAddress => {
     if (!ipAddress) {
       console.error('Unable to retrieve IP address.');
-      msg.innerText = 'liked ';
       return;
     }
 
     const userRef = ref(db, `people/${ipAddress}`);
+   
 
     // Fetch the user data
     get(userRef).then(snapshot => {
@@ -103,7 +108,7 @@ function checkLikedStatus() {
         const userName = userData.Name;
         msg.innerText = `Welcome back`
         thanks.innerText = ` ${userName}! You already liked 😁`;
-
+        // console.log(userRef, userData,userName);
         disableForm();
       } else {
         
@@ -120,7 +125,7 @@ likeBtn.addEventListener('click', submit);
 async function submit() {
   // Check if both input fields are filled
   if (user.value.trim() === '' || insta.value.trim() === '') {
-    msg.innerText = 'fill info before licking😊';
+    msg.innerText = 'fill info before like😊';
     return;
   }
 
@@ -146,7 +151,8 @@ async function submit() {
     set(userRef, {
       Name: user.value,
       Instagram: insta.value,
-      liked: true // Mark the user as liked
+      liked: true, // Mark the user as liked
+      isSpecial: false
     })
       .then(() => {
         msg.innerText = `Thanks for the like! ${user.value}😍 `;
@@ -171,7 +177,6 @@ async function submit() {
         alert(error);
       });
   });
-
   
 }
 // ...

@@ -1,10 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
@@ -182,6 +176,7 @@ Background {
 
 .user-names {
     margin-top: 50px;
+   
 }
 
 .h2 {
@@ -556,10 +551,16 @@ button:hover .filled {
 }
 
 .like-box{
-    border: 1px dashed black;
+    border: 2px dashed black;
     padding: .2rem .5rem;
     border-radius: 9px;
+    font-weight: bold;
 
+}
+
+.like-box > span{
+    font-weight: 600;
+    color: red;
 }
 #nameBackground{
     margin-top: 2rem;
@@ -585,5 +586,36 @@ button:hover .filled {
     transition: opacity 300ms ease-in;
     opacity: 0;
 }
+
+.user-names {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+  }
+  
+
+
+  .special-user-style {
+    /* Add specific styles for special users */
+   color: rgb(0, 0, 0);
+ border: #ffc0cb dashed 2px;
+   box-shadow: #f02eaa66 0px 0px 8px 4px;
+    font-family: 'Libre Baskerville', serif;
+
+    animation: flicker 15s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 25% {
+      box-shadow: #f02eaa66 0px 0px 8px 4px;
+    }
+    25%, 75% {
+      box-shadow: #f02eaa66 0px 0px 8px 0px ;
+    }
+    50% {
+      box-shadow: #f02eaa66 0px 0px 8px 4px;
+    }
   }
   
