@@ -147,39 +147,58 @@ async function submit() {
       return;
     }
 
-    // If not already liked, proceed with the like
     set(userRef, {
       Name: user.value,
       Instagram: insta.value,
-      liked: true, // Mark the user as liked
+      liked: true,
       isSpecial: false
-    })
-      .then(() => {
-        msg.innerText = `Thanks for the like! ${user.value}😍 `;
-        heart.style.opacity = '1';
-
-        // Increment the individual user like count
-        get(likeCountRef).then(snapshot => {
+  })
+  .then(() => {
+      console.log("User data updated successfully");
+      msg.innerText = `Thanks for the like! ${user.value}😍 `;
+      heart.style.opacity = '1';
+  
+      // Increment the individual user like count
+      get(likeCountRef)
+      .then(snapshot => {
           const currentLikeCount = snapshot.val() || 0;
           set(likeCountRef, currentLikeCount + 1);
-        });
-
-        // Increment the total like count
-        get(ref(db, 'posts/totalLikes')).then(snapshot => {
-          const currentTotalLikeCount = snapshot.val() || 0;
-          set(ref(db, 'posts/totalLikes'), currentTotalLikeCount + 1);
-        });
-
-        // Disable the form after a successful like
-        disableForm();
       })
       .catch(error => {
-        alert(error);
+          console.error("Error updating individual like count:", error);
       });
+  
+      // Increment the total like count
+      get(ref(db, 'posts/totalLikes'))
+      .then(snapshot => {
+          const currentTotalLikeCount = snapshot.val() || 0;
+          set(ref(db, 'posts/totalLikes'), currentTotalLikeCount + 1);
+      })
+      .catch(error => {
+          console.error("Error updating total like count:", error);
+      });
+  
+      // Disable the form after a successful like
+      disableForm();
+  })
+  .catch(error => {
+      console.error("Error updating user data:", error);
+      alert("An error occurred. Please try again later.");
+  });
+  
+    
+      
+
+      
   });
   
 }
-// ...
+
+
+
+
+
+
   // Function to disable the form elements
   function disableForm() {
     user.disabled = true;
