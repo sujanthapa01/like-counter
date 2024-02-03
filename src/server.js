@@ -165,7 +165,7 @@ async function submit() {
           set(likeCountRef, currentLikeCount + 1);
       })
       .catch(error => {
-          console.error("Error updating individual like count:", error);
+          alert.error("Error updating individual like count:", error);
       });
   
       // Increment the total like count
@@ -175,7 +175,7 @@ async function submit() {
           set(ref(db, 'posts/totalLikes'), currentTotalLikeCount + 1);
       })
       .catch(error => {
-          console.error("Error updating total like count:", error);
+          alert.error("Error updating total like count:", error);
       });
   
       // Disable the form after a successful like
