@@ -619,3 +619,25 @@ button:hover .filled {
     }
   }
   
+  
+  .deverloper{
+    /* Add specific styles for special users */
+   color: rgb(0, 0, 0);
+ border: #ffc0c0 dashed 2px;
+   box-shadow: #f02e2e66 0px 0px 8px 4px;
+    font-family: 'Libre Baskerville', serif;
+
+    animation: flicker1 15s infinite;
+  }
+
+  @keyframes flicker1 {
+    0%, 25% {
+      box-shadow: #f02e2e66 0px 0px 8px 4px;
+    }
+    25%, 75% {
+      box-shadow: #f02e2e66 0px 0px 8px 0px ;
+    }
+    50% {
+      box-shadow: #f02e2e66 0px 0px 8px 4px;
+    }
+  }

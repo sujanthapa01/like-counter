@@ -68,6 +68,8 @@ function updateUsersList(users) {
     // Add a specific class for styling a special user
     if (user.isSpecial) {
       userNameDiv.classList.add('special-user-style');
+    }else if(user.developer){
+      userNameDiv.classList.add('deverloper');
     }
 
     nameBackground.appendChild(userNameDiv);
@@ -151,7 +153,8 @@ async function submit() {
       Name: user.value,
       Instagram: insta.value,
       liked: true,
-      isSpecial: false
+      isSpecial: false,
+      developer : false
   })
   .then(() => {
       console.log("User data updated successfully");
