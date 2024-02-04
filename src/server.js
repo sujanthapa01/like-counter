@@ -70,6 +70,8 @@ function updateUsersList(users) {
       userNameDiv.classList.add('special-user-style');
     }else if(user.developer){
       userNameDiv.classList.add('deverloper');
+    } else if(user.isfriend){
+      userNameDiv.classList.add('friend')
     }
 
     nameBackground.appendChild(userNameDiv);
@@ -154,7 +156,9 @@ async function submit() {
       Instagram: insta.value,
       liked: true,
       isSpecial: false,
-      developer : false
+      developer : false,
+      isfriend :false
+
   })
   .then(() => {
       console.log("User data updated successfully");
